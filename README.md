@@ -12,4 +12,4 @@ for start client
 cd client ---> npm install--->npm start
 
 now your project start in http://localhost:8081/ you can watch it with your browser
-<img height="400" src="https://github.com/seyyedBagherMusavi/Axon/blob/main/im-repo/mobile-app.png" title="Axon" width="200"/>
+<img height="400" src="https://github.com/seyyedBagherMusavi/Axon/blob/main/im-repo/axon-app.png" title="Axon" width="200"/>
