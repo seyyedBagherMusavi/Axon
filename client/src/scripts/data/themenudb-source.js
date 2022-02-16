@@ -3,7 +3,9 @@ import CONFIG from '../globals/config';
 
 class TheMenuDbSource {
   static async menus() {
-    const response = await fetch(API_ENDPOINT.Menus);
+    const response = await fetch(API_ENDPOINT.Menus, {
+      mode: 'cors',
+    });
     const responseJson = await response.json();
     return responseJson;
   }

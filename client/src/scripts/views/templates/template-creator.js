@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createMenuDetailTemplate = (menu) => `
   <h2 class="menu__title">${menu.title}</h2>
-  <img class="menu__poster" src="${CONFIG.BASE_IMAGE_URL + menu.poster_path}" alt="${menu.title}" />
+  <img class="menu__poster" src="${menu.backdrop_path}" alt="${menu.title}" />
   <div class="menu__info">
   <h3>Information</h3>
     <h4>Tagline</h4>
@@ -30,7 +30,10 @@ const createMenuItemTemplate = (menu) => `
         </div>
     </div>
     <div class="menu-item__content">
-        <h3><a href="${`/#/detail/${menu.id}`}">${menu.title}</a></h3>
+        <h3><li><button id='but_${menu.id}' value=${menu.type}><h1 class="app-bar__brand">
+                              ${menu.title}</h1>
+                    </button></li>
+</h3>
         <p>${menu.overview}</p>
     </div>
   </div>

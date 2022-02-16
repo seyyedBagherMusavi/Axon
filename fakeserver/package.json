@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "json-server -w -H 0.0.0.0 --nc server.json"
+    "start": "json-server -w -H 0.0.0.0 --nc false server.json"
   },
   "author": "",
   "license": "ISC",

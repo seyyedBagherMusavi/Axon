@@ -26,6 +26,7 @@ class App {
     await Menus.assignClick();
     this._content.innerHTML = await page.render();
     await page.afterRender('menus');
+    await page.assignClick('menus');
   }
 }
 

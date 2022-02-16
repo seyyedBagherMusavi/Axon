@@ -9,8 +9,8 @@ const Menus = {
     menus.forEach((menu) => {
       // eslint-disable-next-line no-shadow
       function createMenusItemTemplate(menu) {
-        return `<li><button id=${menu.key}>
-                              ${menu.title}
+        return `<li><button id=${menu.key}><h1 class="app-bar__brand">
+                              ${menu.title}</h1>
                     </button></li>`;
       }
       x += createMenusItemTemplate(menu);
@@ -25,7 +25,8 @@ const Menus = {
     menus.forEach((menu) => {
       const button = document.querySelector(`#${menu.key}`);
       button.addEventListener('click', () => {
-        renderGrid.afterRenderasd(menu.key, menu.title);
+        renderGrid.render(menu.key, menu.title);
+        renderGrid.assignClick(menu.kty);
       });
     });
   },

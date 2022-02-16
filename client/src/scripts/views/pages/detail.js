@@ -1,22 +1,13 @@
 import TheMenuDbSource from '../../data/themenudb-source';
-import UrlParser from '../../routes/url-parser';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import { createMenuDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
-  async render() {
-    return `
-        <div id="menu" class="menu"></div>
-        <div id="likeButtonContainer"></div>
-      `;
-  },
-
-  async afterRender() {
+  async afterRender(id) {
     // Fungsi ini akan dipanggil setelah render()
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const menu = await TheMenuDbSource.detailMenu(url.id);
+    const menu = await TheMenuDbSource.detailMenu(id);
     // TODO: tampilkan menu di dalam DOM
-    const menusContainer = document.querySelector('#menu');
+    const menusContainer = document.querySelector('#contentO');
     menusContainer.innerHTML = createMenuDetailTemplate(menu);
 
     LikeButtonInitiator.Infinity({

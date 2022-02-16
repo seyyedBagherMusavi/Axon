@@ -1,4 +1,4 @@
-import FavoriteMenuIdb from '../data/favoriteMenu-idb';
+import FavoriteMenuIdb from '../data/favoritemenu-idb';
 import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
 
 /* eslint-disable no-underscore-dangle */
